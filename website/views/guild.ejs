@@ -45,6 +45,7 @@
               <img src="https://cdn.discordapp.com/icons/<%=guild.id%>/<%=guild.icon%>.png?size=128" class="bot-avatar rounded-circle" width="150px" height="150px">
               <%}else{%>
               <canvas class="bot-avatar rounded-circle" id="<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %>" width="150px" height="150px"></canvas>
+
               <script>
               function createIcone() {
                 const nameAcronym = document.getElementById("<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '')  %>").getContext('2d');
@@ -118,11 +119,15 @@
 
     <script type="text/javascript">
           function send() {
+
           const alert = document.getElementById('pop');
             alert.innerHTML = `<h2>En cours d'envoi...</h2>`;
             alert.setAttribute('class', 'alert success');
+
       setTimeout(() => {
+
           document.getElementById('form_MESSAGE').submit() 
+
       }, 3000)
     }
     </script>
